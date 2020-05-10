@@ -2,5 +2,5 @@
 
 Estimation and visualization of the percolation threshold
 
-![Example][animation.gif]
+![Example][https://github.com/henrikfredriksson/percolation/blob/master/animation.gif]
 
