@@ -22,7 +22,7 @@ export default function sketch (s) {
   s.draw = () => {
     percolation.draw()
 
-    if (percolation.done()) {
+    if (percolation.isPercolating()) {
       console.log(iter / (cols * rows))
       s.noLoop()
     }
@@ -92,7 +92,7 @@ export default function sketch (s) {
      *
      * @returns {boolean} True if system percolates, otherwise false
      */
-    this.done = () => {
+    this.isPercolating = () => {
       return this.connected(0, 1)
     }
 
