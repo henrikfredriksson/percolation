@@ -27,7 +27,7 @@ export default function sketch (s) {
       s.noLoop()
     }
     percolation.openTile()
-    percolation.flatten()
+    // percolation.flatten()
   }
 
   function Percolation (n) {
@@ -178,11 +178,20 @@ export default function sketch (s) {
 
       if (i === j) return
 
-      if (i < j) {
-        this.grid[j].id = i
-      } else if (i > j) {
-        this.grid[i].id = j
-      }
+      const low = s.min(i, j)
+      const high = s.max(i, j)
+
+      this.grid
+        .filter(tile => tile.id === high)
+        .forEach(tile => {
+          tile.id = low
+        })
+
+      // if (i < j) {
+      //   this.grid[j].id = i
+      // } else if (i > j) {
+      //   this.grid[i].id = j
+      // }
     }
 
     /**
