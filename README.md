@@ -1,4 +1,4 @@
-# Percolation
+# Percolation [![Build Status](https://travis-ci.org/henrikfredriksson/percolation.svg?branch=master)](https://travis-ci.org/henrikfredriksson/percolation)
 
 Estimation and visualization of the percolation threshold
 
